@@ -1,6 +1,5 @@
 import express from "express"
 import cors from "cors"
-//will implement below file later
 import restaurants from "./api/restaurants.route.js"
 
 const app = express();
