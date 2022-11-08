@@ -32,7 +32,7 @@ export default class ReiewsController {
             const reviewResponse = await ReviewsDAO.updateReview(
                 reviewId,
                 req.body.user_id,
-                test,
+                text,
                 date,
             )
 
