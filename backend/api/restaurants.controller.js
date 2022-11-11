@@ -45,7 +45,7 @@ export default class RestaurantsController {
         }
     }
 
-    static async getRestaurantCuisines(res, res, next) {
+    static async getRestaurantCuisines(req, res, next) {
         try {
             let cuisines = await RestaurantDAO.getRestaurantCuisines()
             res.json(cuisines)
