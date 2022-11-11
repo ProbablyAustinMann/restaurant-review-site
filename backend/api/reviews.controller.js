@@ -64,6 +64,7 @@ export default class ReiewsController {
                 userId,
             )
             res.json({status: "success"})
+            
         }  catch (e) {
             res.status(500).json({error: e.message})
         }
