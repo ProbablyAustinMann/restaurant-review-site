@@ -30,7 +30,7 @@ export default class RestaurantsController {
         res.json(response)
     }
 
-    static async getRestaurantById(req, res, next) {
+    static async apiGetRestaurantById(req, res, next) {
         try {
             let id = req.params.id || {}
             let restaurant = await RestaurantDAO.getRestaurantById(id)
@@ -45,9 +45,9 @@ export default class RestaurantsController {
         }
     }
 
-    static async getRestaurantCuisines(req, res, next) {
+    static async apiGetRestaurantCuisines(req, res, next) {
         try {
-            let cuisines = await RestaurantDAO.getRestaurantCuisines()
+            let cuisines = await RestaurantDAO.getCuisines()
             res.json(cuisines)
         } catch (e) {
             console.log(`api, ${e}`)
